@@ -4,52 +4,77 @@ Distintos ejercicios Python
 Data: En algunos ejercicios he usado ayuda de ChatGPT como orientación, pero siempre he querido hacerlos lo más personales posible. Hay muchas maneras de hacer los ejercicios, y me gusta tratar de encontrar mi solución. En algunos ejercicios veremos como hago el trabajo de dos formas.
 
 ## Ejercicio 1: 
-    Escribe una función que reciba una cadena de texto como parámetro y devuelva un diccionario con las frecuencias de cada letra en la cadena. Los espacios no deben ser considerados.
+    Escribe una función que reciba una cadena de texto como parámetro y devuelva un 
+    diccionario con las frecuencias de cada letra en la cadena. Los espacios no deben
+    ser considerados.
 
         - 1: Necesitaba quitarme los espacios, opté por remplazarlos por nada " " por "".
 
-        - 2: Para contar correctamente la frecuencia de las letras, sin que contase letras extras en mayúsculas, lo que hice fue usar la función lower()
+        - 2: Para contar correctamente la frecuencia de las letras, sin que contase letras
+         extras en mayúsculas, lo que hice fue usar la función lower()
 
-        - 3: Cree un diccionario vacio y con un for cree un nuevo diccionario, donde la clave es el valor de Index y el value lo coge el count sobre la palabra de Index.
+        - 3: Cree un diccionario vacio y con un for cree un nuevo diccionario, donde la 
+        clave es el valor de Index y el value lo coge el count sobre la palabra de Index.
 
 ## Ejercicio 2:
-    Dada una lista de números, obtén una nueva lista con el doble de cada valor. Usa la función map().
+    Dada una lista de números, obtén una nueva lista con el doble de cada valor. Usa la 
+    función map().
 
         - 1: Cree una lista de números
 
-        - 2: Use la función map() como solicita el ejercicio para dar una lista con el doble de cada valor usando lambda donde "numero" va recorriendo la lista y multiplicandose por 2.
+        - 2: Use la función map() como solicita el ejercicio para dar una lista con el 
+        doble de cada valor usando lambda donde "numero" va recorriendo la lista y 
+        multiplicandose por 2.
         
-        - 3: Imprimo la lista antigua y la nueva para ver la diferencia de las listas y contrastar que funciona.
+        - 3: Imprimo la lista antigua y la nueva para ver la diferencia de las listas y 
+        contrastar que funciona.
 
 ## Ejercicio 3:
-    Escribe una función que tome una lista de palabras y una palabra objetivo como parámetros. La función debe devolver una lista con todas las palabras de la lista original que contengan la palabra objetivo.
+    Escribe una función que tome una lista de palabras y una palabra objetivo como parámetros.
+     La función debe devolver una lista con todas las palabras de la lista original que 
+     contengan la palabra objetivo.
 
-        - 1: Le pedí a ChatGPT que me hiciese una lista de X frutas, pereza mortal, ahorro de tiempo y efectividad.
+        - 1: Le pedí a ChatGPT que me hiciese una lista de X frutas, pereza mortal, 
+        ahorro de tiempo y efectividad.
 
-        - 2: Cree la función tal como comenta, cree una lista vacía que rellenar y utilicé un for dentro de la función para recorrer la lista de frutas una a una.
+        - 2: Cree la función tal como comenta, cree una lista vacía que rellenar y 
+        utilicé un for dentro de la función para recorrer la lista de frutas una a una.
 
-        - 3: Dentro del for, puse un if para revisar si contiene el texto que busco. De todas las opciones que me salian de "index" utilice un __contains__ que cumplia con el proposito que necesitaba.
+        - 3: Dentro del for, puse un if para revisar si contiene el texto que busco. 
+        De todas las opciones que me salian de "index" utilice un __contains__ que 
+        cumplia con el proposito que necesitaba.
 
-        - 4: Si cada palabra incluia la palabraObjetivo se añadía en la lista que retorna la función para luego ser impresa.
+        - 4: Si cada palabra incluia la palabraObjetivo se añadía en la lista que 
+        retorna la función para luego ser impresa.
 
 ## Ejercicio 4:
-    Genera una función que calcule la diferencia entre los valores de dos listas. Usa la función map().
+    Genera una función que calcule la diferencia entre los valores de dos listas. 
+    Usa la función map().
         
-       No estoy seguro si la solución aportada es la que se solicita, pero lo que hice fue coger dos listas y hacer la resta de Elemento1Lista1 con Elemento1Lista2 y consecutivamente con una función lambda y map().
+       No estoy seguro si la solución aportada es la que se solicita, pero lo que 
+       hice fue coger dos listas y hacer la resta de Elemento1Lista1 con 
+       Elemento1Lista2 y consecutivamente con una función lambda y map().
 
 ## Ejercicio 5:
-    Escribe una función que tome una lista de números como parámetro y un valor opcional nota_aprobado (por defecto 5). La función debe calcular la media de los números en la lista y determinar si la media es mayor o igual que nota_aprobado. Si es así, el estado será "aprobado"; de lo contrario, "suspenso". La función debe devolver una tupla que contenga la media y el estado.
+    Escribe una función que tome una lista de números como parámetro y un valor 
+    opcional nota_aprobado (por defecto 5). La función debe calcular la media de
+    los números en la lista y determinar si la media es mayor o igual que nota_aprobado.
+    Si es así, el estado será "aprobado"; de lo contrario, "suspenso". 
+    La función debe devolver una tupla que contenga la media y el estado.
 
         Paso 1: Crear una lista de valores tipo float
                 Crear una variable notaAprobado
 
         Paso 2: Crear función con sus devidos parámetros y salidas.
 
-        Paso 3: Calcular la media: utilicé la función sum para sumar todos los valores de la lista y luego calculé la longitud con len.
+        Paso 3: Calcular la media: utilicé la función sum para sumar todos los valores
+        de la lista y luego calculé la longitud con len.
 
-        Paso 4: Para no sacar todos los decimales, utilicé la función round para reducir a dos decimales.
+        Paso 4: Para no sacar todos los decimales, utilicé la función round para reducir
+        a dos decimales.
 
-        Paso 5: Comprobar si la media es igual o superior a la nota límite. En cualquier caso, saco una tupla con la nota y si está suspendido o aprobado.
+        Paso 5: Comprobar si la media es igual o superior a la nota límite. En cualquier
+        caso, saco una tupla con la nota y si está suspendido o aprobado.
 
         Puse dos ejemplos, uno aprobado y otro suspendido, por eso se ven dos listas.
 
