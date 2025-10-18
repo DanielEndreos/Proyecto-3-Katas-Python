@@ -15,14 +15,14 @@ empleados = [
     {"nombre": "Raúl Navarro"   , "puesto": "Logística y Almacén"}
 ]
 
+def busqEmpleado(name:str, listaEmpl: list):
+    return next((empleado for empleado in listaEmpl if empleado["nombre"] == name), f"El trabajador {name} no trabaja aquí")
+
 nombreCompleto = "Dani Meco"
 
-def busqEmpleado(name:str, listaEmpl: list) -> str:
-    return next((e for e in empleados if e["nombre"] == name), "El trabajador no trabaja aquí")
+resultadoBusqueda = busqEmpleado(nombreCompleto, empleados)
 
-resultadoBusqueda = busqEmpleado("Dani Meco", empleados)
-
-print(f"El trabajador {resultadoBusqueda['nombre']} trabaja aquí como {resultadoBusqueda['puesto']}.")
-    
-    
-    
+if type(resultadoBusqueda) == str:
+    print (resultadoBusqueda)
+else:
+    print(f"El trabajador {resultadoBusqueda['nombre']} trabaja aquí como {resultadoBusqueda['puesto']}.")

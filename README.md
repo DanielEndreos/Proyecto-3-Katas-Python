@@ -251,22 +251,202 @@ Data: En algunos ejercicios he usado ayuda de ChatGPT como orientación, pero si
 ## Ejercicio 31:
     Crea una función que solicite al usuario ingresar una lista de nombres y luego un nombre para buscar en esa lista. Si el nombre está en la lista, imprime un mensaje indicando que fue encontrado; de lo contrario, lanza una excepción.
 
-    
-## Ejercicio 32:
+        He utilizado una función while para solicitar al usuario tantos nombres como sean posibles, teniendo que terminar con la palabra 'fin', da igual si es Fin, fIn, fiN... pongo en minúsculas con lower() y reviso que sea igual a 'fin'.
 
+        Luego con una función if comparo si las condiciones que busco son las que necesito, en el caso de que sí añado el nombre a la lista en minúsculas y pongo en mayuscula la primera letra, si el nombre está vacio o no es alpha no lo añado a la lista, y en el caso de que sea fin, el while terminará y ya ejecutamos el código.
+
+        En este momento pedimos al usuario que nombre quiere buscar y con una función if preguntamos si el nombre entregado en minusculas y con la primera letra en mayus está en la lista.
+
+        En el caso de que se encuentre, mostramos un mensaje por pantalla y en el caso contrario pues mostramos un mensaje diciendo que el nombre no se encontraba en la lista.
+
+## Ejercicio 32:
+    Crea una función que tome un nombre completo y una lista de empleados, busque el nombre en la lista y devuelva el puesto del empleado si se encuentra; de lo contrario, devuelve un mensaje indicando que la persona no trabaja aquí.
+
+        Utilizamos la función next() que sirve para buscar el primer elemento que cumpla la condición.
+
+        Utilizamos la funcion i for i in X if i["nombre] == nombreBuscado. 
+        Con el for recorremos diccionario en diccionario, y buscando dentro del key "nombre" si se encuentra el target. 
+        
+        Caso "a": Encontramos el nombre. Next nos retornará el diccionario, donde encontramos las keys con sus valores.
+
+        Caso "b": No encontramos el nombres. Next nos retornará la frase por defecto que hemos preparado.
+
+        Por este motivo, como next nos puede retornar dos tipos distintos, no he declarado una salida de la función, aunque por lo que he visto, tampoco afecta directamente.
+        
+        Por el motivo mencionado anteriormente, he creado un if que compruebe si el valor entregado de la variable es un String o otra cosa, en este caso, diccionario. Dependiendo de cada cosa ejecutamos un print distinto.    
+    
 ## Ejercicio 33:
+    Crea una función lambda que sume elementos correspondientes de dos listas dadas.
+
+        Creado una función lambda que suma a + b en lista A y lista B.
 
 ## Ejercicio 34:
+    Crea la clase Arbol
+
+            Define un árbol genérico con un tronco y ramas como atributos.
+        Métodos disponibles: crecer_tronco, nueva_rama, crecer_ramas, quitar_rama, info_arbol.
+        Código a seguir:
+
+          -  Inicializar un árbol con un tronco de longitud 1 y una lista vacía de ramas.
+          -  Implementar el método crecer_tronco para aumentar la longitud del tronco en una unidad.
+          -  Implementar el método nueva_rama para agregar una nueva rama de longitud 1 a la lista de ramas.
+          -  Implementar el método crecer_ramas para aumentar en una unidad la longitud de todas las ramas existentes.
+          -  Implementar el método quitar_rama para eliminar una rama en una posición específica.
+            Implementar el método info_arbol para devolver información sobre la longitud del tronco, el número de ramas y sus longitudes.
+
+        Caso de uso:
+                a. Crear un árbol.
+                b. Hacer crecer el tronco una unidad.
+                c. Añadir una nueva rama.
+                d. Hacer crecer todas las ramas una unidad.
+                e. Añadir dos nuevas ramas.
+                f. Retirar la rama situada en la posición 2.
+                g. Obtener información sobre el árbol.
+
+
+        Está practicamente todo explicado en el enunciado, pero generamos una class llamada Arbol.
+
+        - Inicialización:
+        Luego inicializamos la clase con la funcion __init__ siendo el parametro Self el propio arbol que se cree. 
+        
+        Self funciona como una variable local hará caso al caso individual y no al global. Arbol Pepito, Arbol José...
+
+        Creamos el atributo tronco y le asignamos valor 1
+        Creamos el atributo ramas y le asignamos formato lista.
+
+        - Creación de las funciones solicitas
+
+            - crecer_tronco(self)
+                Llamamos a Self para que afecte a la instancia y sumamos 1 a tronco mediante +=
+
+            - nueva_rama(self)
+                Llamamos a self para que afecte a la instancia y usamos la función append(1) para generar una nueva rama. Esto añade un elemento en la lista con valor 1, y se añade al final.
+            
+            - crecer_ramas(self)
+                Hacemos un for para recorrer la lista con una función range, donde añadimos a todas los elementos de la lista un +1
+
+            - quitar_ramas(self, pos: int)
+                En este caso realizamos una función pop() donde gracias al parámetro pos podemos quitar la rama solicitada.
+
+            - info_arbol(self)
+                Nos devuelve un print de la información actual del árbol.
+
+            Por último hacemos las llamadas a los funciones de la clase para ejecutar el caso de uso.
+
+            Ha sido un ejercicio muy divertido, me ha gustado más que los otros anteriores... la virgen...
 
 ## Ejercicio 35:
+    Crea la clase UsuarioBanco
+        Representa a un usuario de un banco con su nombre, saldo y si tiene o no cuenta corriente.
+        Métodos: retirar_dinero, transferir_dinero, agregar_dinero.
+        Código a seguir:
+
+            Inicializar un usuario con nombre, saldo y un indicador (True o False) de cuenta corriente.
+            Implementar retirar_dinero para sustraer dinero del saldo, lanzando un error si no es posible.
+            Implementar transferir_dinero para transferir dinero desde otro usuario, lanzando un error en caso de fallo.
+            Implementar agregar_dinero para aumentar el saldo del usuario.
+
+        Caso de uso:
+                a. Crear dos usuarios: "Alicia" con saldo inicial de 100 y "Bob" con saldo inicial de 50, ambos con cuenta corriente.
+                b. Agregar 20 unidades al saldo de Bob.
+                c. Transferir 80 unidades de Bob a Alicia.
+                d. Retirar 50 unidades del saldo de Alicia.
+        --------------------------------------------------------
+
+        Este ejercicio lo he disfrutado mil, como el del árbol.
+
+        Al final, es muy parecido al árbol, creamos la clase usuario donde en este caso, en vez de inicializar las variables, he creado unos parámetros que se asignan al self para inicializar el usuario.
+
+        Luego he creado las distintas funciones solicitadas, le he puesto algo de humor a los mensajes de consola. Al final consultamos saldos, comparamos y sacamos mensajes en caso de A o B.
+
+        Luego realizo el caso de uso como se indica.
+
+        Se podría añadir más azúcar, por ejemplo, podriamos crear una variable aleatoria random(), que dependiendo del valor que saque, mostrar un mensaje distinto de una lista de mensajes.
 
 ## Ejercicio 36:
+    Crea una función llamada procesar_texto
+        Procesa un texto según la opción especificada: contar_palabras, reemplazar_palabras o eliminar_palabra.
+        Código a seguir:
+
+            Crear una función contar_palabras que cuente el número de veces que aparece cada palabra en el texto y devuelva un diccionario.
+            Crear una función reemplazar_palabras para sustituir una palabra_original por una palabra_nueva en el texto y devolver el texto modificado.
+            Crear una función eliminar_palabra que elimine una palabra del texto y devuelva el texto sin ella.
+            Crear la función procesar_texto que reciba un texto, una opción ("contar", "reemplazar", "eliminar") y un número variable de argumentos según la opción elegida.
+
+        Caso de uso:
+            Verificar el funcionamiento completo de procesar_texto.
+
+    
+        Este ejercicio le he puesto comentarios para separar las funciones, ya costaba leerlas...
+
+        En este ejercicio he utilizado mucho los for y los if.
+
+        - contar_palabras:
+            Para contar palabras, he cogido el texto, lo he hecho un minus con lower(), luego un replace para quitar . y , y luego lo he separado por espacios con split(). De esta manera ya tenía una lista con palabras separadas.
+
+            Luego he creado un diccionario vacio.
+
+            He recorrido palabra por palabra con una función for y he utilizado la función get(), busca la clave en el diccionario, si no la encuentra la genera y le pone un valor por defecto, en este caso 0 pero a posterior le sumamos 1. Por ejemplo:
+
+                - No existe: Creamos variable con valor 1
+                - Existe: Cogemos el valor de la variable y le sumamos 1
+
+            El resultado lo volvemos a guardar en su diccionario correspondiente.
+
+        - reemplazar_palabras:
+            Para reemplazar palabras he hecho la misma parte que contar palabras para sacar una lista de palabras y luego, he recorrido todas las palabras buscando si la palabra es igual a la palabra que quiero sacar, en el caso que sea así, añadimos la palabra que queremos meter, en caso contrario añadimos la palabra en cuestión.
+
+            Luego juntamos de nuevo todas las palabras en una misma lista.
+
+        - eliminar_palabra:
+            Lo mismo que reemplazar, es decir, la misma lógica, solo guardamos las palabras que queremos y luego volvemos a juntar la lista. 
+
+        - procesar_texto:
+            Dependiendo de lo que queramos hacer, usamos una función o otra e introducimos unos parametros o otros, haciendo uso de *args.
+
+        En este ejercicio me he dado cuenta que para identificar que algo es una tupla, si solo tiene un elemento, debe tener una , que separe con la NADAAAAAAA!
+
 
 ## Ejercicio 37:
+    Genera un programa que nos indique si es de noche, de día o de tarde según la hora proporcionada por el usuario.
+
+        Sencillo, le digo al usuario que debe introducir el formato de fecha y hora con un formato. Y separo las horas de los minutos y de los segundos mediante un split() teniendo en cuenta los ":".
+
+        Luego uso la posición [0] que corresponde a la hora y comparo entre franjas horarias.
+
+        No he creado ningún tipo de except porque no se solicita en el ejercicio y no quiero invertir más tiempo de lo necesario, son demasiados ejercicios... 
+
+        Pero como todo... más dulce más azúcar
 
 ## Ejercicio 38:
+    Escribe un programa que determine qué calificación en texto tiene un alumno según su calificación numérica.
+            Reglas:
+                    0 - 69: insuficiente
+                    70 - 79: bien
+                    80 - 89: muy bien
+                    90 - 100: excelente
+
+        Muy parecido al ejercicio anterior. En este caso si que he puesto un except en caso de que el valor introducido no sea numérico. 
+        
+        Luego se podría poner un fallo de error en caso de salirnos del valor solicitado, 0 o superior a 100. Pero bueno, luego hay un ejercicio así.
 
 ## Ejercicio 39:
+    Escribe una función que tome dos parámetros: figura (una cadena que puede ser "rectangulo", "circulo" o "triangulo") y datos (una tupla con los datos necesarios para calcular el área de la figura).
 
+        Le pregunté a la IA como calcular las áreas, tenía claro la del rectángulo y circulo, pero el triangulo? JAH!
+
+        Al final, la diferencia en este ejercicio respecto a los anteriores es la funcionalidad kwargs, muy interesante y curioso, el poder ampliar y reducir el contenido a entregar para luego usar en el interior.´
+
+        Había creado una variable y un if dependiendo de la variable pero era complicado hacer print casos distintos, mucha duplicidad de cógido, así que lo he hecho de esta manera para ver los tres casos con variables distintas y mostrar resultados.
+        
 ## Ejercicio 40:
+    Escribe un programa en Python que utilice condicionales para determinar el monto final de una compra en una tienda en línea, después de aplicar un descuento. El programa debe:
+        a. Solicitar al usuario el precio original de un artículo.
+        b. Preguntar si tiene un cupón de descuento (respuesta sí o no).
+        c. Si la respuesta es sí, solicitar el valor del cupón de descuento.
+        d. Aplicar el descuento al precio original, siempre que el valor del cupón sea válido (mayor a cero).
+        e. Mostrar el precio final de la compra, considerando o no el descuento.
+        f. Usar estructuras de control de flujo (if, elif, else) para llevar a cabo las acciones.
 
+
+    No hay mucho que explicar de este código, se ha hecho lo que se ha pedido paso a paso, se puede ver en el proceso.
