@@ -4,13 +4,13 @@ Distintos ejercicios Python
 Data: En algunos ejercicios he usado ayuda de ChatGPT como orientación, pero siempre he querido hacerlos lo más personales posible. Hay muchas maneras de hacer los ejercicios, y me gusta tratar de encontrar mi solución. En algunos ejercicios veremos como hago el trabajo de dos formas.
 
 ## Ejercicio 1: 
-`    Escribe una función que reciba una cadena de texto como parámetro y devuelva un diccionario con las frecuencias de cada letra en la cadena. Los espacios no deben ser considerados.
+    Escribe una función que reciba una cadena de texto como parámetro y devuelva un diccionario con las frecuencias de cada letra en la cadena. Los espacios no deben ser considerados.
 
         - 1: Necesitaba quitarme los espacios, opté por remplazarlos por nada " " por "".
 
         - 2: Para contar correctamente la frecuencia de las letras, sin que contase letras extras en mayúsculas, lo que hice fue usar la función lower()
 
-        - 3: Cree un diccionario vacio y con un for cree un nuevo diccionario, donde la clave es el valor de Index y el value lo coge el count sobre la palabra de Index.`
+        - 3: Cree un diccionario vacio y con un for cree un nuevo diccionario, donde la clave es el valor de Index y el value lo coge el count sobre la palabra de Index.
 
 ## Ejercicio 2:
     Dada una lista de números, obtén una nueva lista con el doble de cada valor. Usa la función map().
